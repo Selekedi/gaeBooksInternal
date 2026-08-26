@@ -1,0 +1,25 @@
+.fab-link {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 56px;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.fab-link:hover {
+  background-color: #1565c0;
+}
+
+.fab-icon {
+  display: inline-block;
+}

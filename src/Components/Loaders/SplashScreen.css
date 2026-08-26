@@ -1,0 +1,15 @@
+.splash-screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+

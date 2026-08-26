@@ -1,0 +1,58 @@
+.fab-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.fab-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-size: 32px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fab-button.open {
+  transform: rotate(45deg);
+}
+
+.fab-options {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.fab-options.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fab-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  color: #007bff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.fab-option:hover {
+  background-color: #007bff;
+  color: white;
+}
+
