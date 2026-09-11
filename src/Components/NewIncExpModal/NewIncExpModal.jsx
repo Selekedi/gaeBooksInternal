@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { addTransaction } from "../../Server/Server"
+import "./NewIncExpModal.css"
 
 export default function NewIncExpModal({type, clientId,onClose}){
     const [name, setName] = useState("")
@@ -64,7 +65,9 @@ export default function NewIncExpModal({type, clientId,onClose}){
                         <label>Date</label>
                         <input value={date} onChange={(e) => setDate(e.target.value)} type="date"/>
                     </div>
-
+                    <button onClick={onClose}>
+                        close
+                    </button>
                     <button
                         onClick={e => handleSubmit(e)}
                     >Add New {type}</button>

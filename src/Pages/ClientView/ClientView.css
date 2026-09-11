@@ -1,0 +1,53 @@
+.date-group {
+    padding: 8px;
+    background-color: #ddd;
+    margin: 6px 0;
+    width: fit-content;
+}
+
+.date-group .transactions .tb-heads {
+    display: grid;
+    /* Defines columns: e.g., Time, Description, Category, Amount */
+    grid-template-columns: minmax(200px,400px) 120px 100px; 
+    gap: 16px;
+    align-items: center;
+}
+
+.date-group .transactions .item {
+    display: grid;
+    /* Defines columns: e.g., Time, Description, Category, Amount */
+    grid-template-columns: minmax(200px,400px) 40px 20px; 
+    gap: 4px;
+    row-gap: 4px;
+    align-items: center; /* Vertically centers the text in the row */
+}
+
+.total {
+    display: grid;
+    /* Defines columns: e.g., Time, Description, Category, Amount */
+    grid-template-columns: minmax(200px,400px) 40px; 
+    gap: 4px;
+    row-gap: 4px;
+    align-items: center;
+    border-top: 1px solid;
+    width: fit-content;
+}
+
+.total.net {
+    border: 0;
+    margin-top: 4px;
+    padding: 4px;
+}
+
+.net.loss {
+    background: linear-gradient(rgba(255,0,0,0.2),rgba(255,0,0,0.2));
+}
+
+.net.profit {
+    background: linear-gradient(rgba(0,255,0,0.2),rgba(0,255,0,0.2));
+}
+
+.date-group .transactions .item > div {
+    display: flex;
+    gap: 8px;
+}

@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
+import { Route, HashRouter as Router, Routes } from "react-router-dom"
 import ClientList from "./Pages/ClientList/ClientList"
 import AddNewClient from "./Pages/AddNewClient/AddNewClient"
 import ClientView from "./Pages/ClientView/ClientView"
@@ -7,6 +7,7 @@ import ProtectedRoute from "./utils/ProtectedRoute"
 import { useEffect, useState } from "react"
 import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "./services/firebase/firebaseConfig"
+import SplashScreen from "./Components/Loaders/SplashScreen"
 
 function App() {
   const [user,setUser] = useState(undefined)
@@ -17,6 +18,9 @@ function App() {
 
     return () => unsubscribe()
   },[])
+  
+  if(user === undefined) return <SplashScreen/>
+
   return (
    <Router>
     <Routes>
@@ -26,9 +30,6 @@ function App() {
           <Route path="/add-client" element={<AddNewClient/>}/>
           <Route path="/client/:id" element={<ClientView/>}/>
       </Route>
-      <Route path="/" element={<ClientList/>}/>
-      <Route path="/add-client" element={<AddNewClient/>}/>
-      <Route path="/client/:id" element={<ClientView/>}/>
     </Routes>
    </Router>
   )

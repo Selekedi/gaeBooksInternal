@@ -1,4 +1,4 @@
-import { collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, where } from "firebase/firestore"
+import { collection, deleteDoc, doc, getDoc, getDocs, query, serverTimestamp, setDoc, where } from "firebase/firestore"
 import { db } from "../services/firebase/firebaseConfig"
 
 const clientsRef = collection(db,"clients")
@@ -74,3 +74,13 @@ export const addTransaction = async ({clientId, type, details}) => {
         console.error(error)
     }
 }
+
+export const deleteTransactionById = async (id) => {
+    try {
+        const transactionRef = doc(db,"transaction",id)
+        await deleteDoc(transactionRef)
+    } catch (error) {
+        console.error(error)
+        throw error
+    }
+} 

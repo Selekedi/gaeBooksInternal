@@ -1,0 +1,16 @@
+.new-income-expense-modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8));
+    z-index: 5;
+}
+
+.new-income-expense-modal .modal {
+    background-color: #fff;
+    padding: 24px 48px;
+    box-shadow: 0 0 2px #555;
+    border-radius: 8px;
+}
+

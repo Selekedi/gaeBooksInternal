@@ -1,0 +1,8 @@
+.delete-modal-container {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8));
+    z-index: 5;
+}
